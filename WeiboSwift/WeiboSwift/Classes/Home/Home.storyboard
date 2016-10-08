@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="38P-Rv-JTb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="2SC-8M-Svr">
+            <objects>
+                <viewController id="6AV-gM-U3o" customClass="HomeViewController" customModule="WeiboSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q2d-kQ-zGK"/>
+                        <viewControllerLayoutGuide type="bottom" id="B1i-5L-Icl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yIe-gA-ydg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="首页" id="VIY-V2-GNT"/>
+                    <connections>
+                        <outlet property="visitorView" destination="kCe-pw-YsS" id="Ba2-dY-HZt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="svK-vp-oIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="kCe-pw-YsS" customClass="HomeVisitorView" customModule="WeiboSwift" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_smallicon" translatesAutoresizingMaskIntoConstraints="NO" id="cFk-bh-1Q4"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUp-it-q9J">
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_house" translatesAutoresizingMaskIntoConstraints="NO" id="Jso-TZ-OIV"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klq-jY-380">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="VaJ-xb-wX0"/>
+                                        <constraint firstAttribute="width" constant="100" id="iAH-bG-1QR"/>
+                                    </constraints>
+                                    <state key="normal" title="去关注" backgroundImage="common_button_white_disable">
+                                        <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注一些人，回这里看看有什么惊喜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aH-dG-7hW">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="klq-jY-380" firstAttribute="centerX" secondItem="uUp-it-q9J" secondAttribute="centerX" id="J9O-KR-c3l"/>
+                                <constraint firstItem="4aH-dG-7hW" firstAttribute="leading" secondItem="uUp-it-q9J" secondAttribute="leading" constant="20" id="LXX-xy-x71"/>
+                                <constraint firstItem="klq-jY-380" firstAttribute="top" secondItem="4aH-dG-7hW" secondAttribute="bottom" constant="38" id="cR5-ny-0gb"/>
+                                <constraint firstItem="4aH-dG-7hW" firstAttribute="top" secondItem="Jso-TZ-OIV" secondAttribute="bottom" constant="42" id="cdh-nx-iJu"/>
+                                <constraint firstAttribute="trailing" secondItem="4aH-dG-7hW" secondAttribute="trailing" constant="20" id="eVT-os-AlV"/>
+                                <constraint firstItem="Jso-TZ-OIV" firstAttribute="centerX" secondItem="uUp-it-q9J" secondAttribute="centerX" id="jrA-qX-379"/>
+                                <constraint firstItem="Jso-TZ-OIV" firstAttribute="top" secondItem="uUp-it-q9J" secondAttribute="top" constant="-32" id="sru-qr-vVf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="uUp-it-q9J" secondAttribute="bottom" id="4TP-To-v5l"/>
+                        <constraint firstItem="cFk-bh-1Q4" firstAttribute="top" secondItem="kCe-pw-YsS" secondAttribute="top" constant="144" id="ABU-nn-zEs"/>
+                        <constraint firstItem="cFk-bh-1Q4" firstAttribute="leading" secondItem="kCe-pw-YsS" secondAttribute="leading" id="AsG-gQ-ub9"/>
+                        <constraint firstAttribute="trailing" secondItem="uUp-it-q9J" secondAttribute="trailing" id="BU3-II-m5H"/>
+                        <constraint firstItem="uUp-it-q9J" firstAttribute="leading" secondItem="kCe-pw-YsS" secondAttribute="leading" id="Y8l-6F-han"/>
+                        <constraint firstItem="uUp-it-q9J" firstAttribute="top" secondItem="kCe-pw-YsS" secondAttribute="top" constant="254" id="h51-mV-YVh"/>
+                        <constraint firstAttribute="trailing" secondItem="cFk-bh-1Q4" secondAttribute="trailing" id="ow5-jN-Dep"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="animatedImageView" destination="cFk-bh-1Q4" id="waE-FB-uIs"/>
+                        <outlet property="focusButton" destination="klq-jY-380" id="gfe-HN-5oA"/>
+                    </connections>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-2385" y="-1040"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="YAe-4G-cP1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="38P-Rv-JTb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" selectedImage="tabbar_home_highlighted" id="cWR-ku-Gqn"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qsH-Xm-T3Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6AV-gM-U3o" kind="relationship" relationship="rootViewController" id="Zm0-MG-DWp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cka-Zw-TdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3175.1999999999998" y="-1055.6221889055473"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="common_button_white_disable" width="11" height="9"/>
+        <image name="tabbar_home" width="30" height="30"/>
+        <image name="tabbar_home_highlighted" width="30" height="30"/>
+        <image name="visitordiscover_feed_image_house" width="94" height="90"/>
+        <image name="visitordiscover_feed_image_smallicon" width="175" height="175"/>
+    </resources>
+</document>

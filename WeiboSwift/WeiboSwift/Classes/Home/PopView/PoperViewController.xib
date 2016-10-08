@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PoperViewController" customModule="WeiboSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popover_background" translatesAutoresizingMaskIntoConstraints="NO" id="Niu-ga-7eD"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rWk-zr-vlK">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Niu-ga-7eD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Rq-RO-5DM"/>
+                <constraint firstItem="rWk-zr-vlK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="7qP-zN-2OZ"/>
+                <constraint firstAttribute="trailing" secondItem="Niu-ga-7eD" secondAttribute="trailing" id="FUW-oI-UK7"/>
+                <constraint firstItem="Niu-ga-7eD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Q1k-id-p5r"/>
+                <constraint firstItem="rWk-zr-vlK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="17" id="Qjs-vI-kMN"/>
+                <constraint firstAttribute="bottom" secondItem="Niu-ga-7eD" secondAttribute="bottom" id="cOW-p5-k1d"/>
+                <constraint firstAttribute="bottom" secondItem="rWk-zr-vlK" secondAttribute="bottom" constant="12" id="dqP-oW-vyu"/>
+                <constraint firstAttribute="trailing" secondItem="rWk-zr-vlK" secondAttribute="trailing" constant="12" id="wlr-8i-1XJ"/>
+            </constraints>
+            <point key="canvasLocation" x="70" y="44"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="popover_background" width="217" height="49"/>
+    </resources>
+</document>

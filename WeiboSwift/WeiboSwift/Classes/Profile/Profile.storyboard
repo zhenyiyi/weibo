@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TrF-Mv-SX8">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--我-->
+        <scene sceneID="NbA-Yc-KYU">
+            <objects>
+                <viewController id="FrF-Kv-Bbd" customClass="ProfileViewController" customModule="WeiboSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sfv-OG-hhX"/>
+                        <viewControllerLayoutGuide type="bottom" id="LBm-ph-UYE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2y9-K2-q7H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="我" id="Uc9-fM-Oan"/>
+                    <connections>
+                        <outlet property="visitorView" destination="g8m-4e-Ime" id="Z98-YA-Dvs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0B-Z9-Jc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="g8m-4e-Ime" customClass="OtherVisitorView" customModule="WeiboSwift" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ElZ-Rt-8jR">
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_image_profile" translatesAutoresizingMaskIntoConstraints="NO" id="x8N-lX-bMZ"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录后，你的微博，相册，个人资料会显示在这里，展示给别人" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0D-S1-4CJ">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QJ-vZ-quZ">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="bKS-8z-Il6"/>
+                                        <constraint firstAttribute="width" constant="100" id="hKZ-Sa-q08"/>
+                                    </constraints>
+                                    <state key="normal" title="注册" backgroundImage="common_button_white_disable">
+                                        <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="register:" destination="g8m-4e-Ime" eventType="touchUpInside" id="kN0-0S-An1"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUi-bX-nzT">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="GyM-ot-C8x"/>
+                                        <constraint firstAttribute="width" constant="100" id="k7V-jz-Yey"/>
+                                    </constraints>
+                                    <state key="normal" title="登录" backgroundImage="common_button_white_disable">
+                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="login:" destination="g8m-4e-Ime" eventType="touchUpInside" id="oZ8-ms-3Wg"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="4QJ-vZ-quZ" firstAttribute="centerX" secondItem="ElZ-Rt-8jR" secondAttribute="centerX" constant="-70" id="2UA-kK-iYe"/>
+                                <constraint firstItem="i0D-S1-4CJ" firstAttribute="top" secondItem="x8N-lX-bMZ" secondAttribute="bottom" constant="20" id="U55-5R-0ZK"/>
+                                <constraint firstItem="CUi-bX-nzT" firstAttribute="leading" secondItem="4QJ-vZ-quZ" secondAttribute="trailing" constant="40" id="Wkx-eO-E5E"/>
+                                <constraint firstAttribute="trailing" secondItem="i0D-S1-4CJ" secondAttribute="trailing" constant="20" id="bfW-2y-FeM"/>
+                                <constraint firstItem="x8N-lX-bMZ" firstAttribute="top" secondItem="ElZ-Rt-8jR" secondAttribute="top" constant="-32" id="dD7-JQ-Wo8"/>
+                                <constraint firstItem="CUi-bX-nzT" firstAttribute="height" secondItem="4QJ-vZ-quZ" secondAttribute="height" id="dsG-CZ-M0b"/>
+                                <constraint firstItem="i0D-S1-4CJ" firstAttribute="leading" secondItem="ElZ-Rt-8jR" secondAttribute="leading" constant="20" id="iBK-ta-PeK"/>
+                                <constraint firstItem="4QJ-vZ-quZ" firstAttribute="top" secondItem="i0D-S1-4CJ" secondAttribute="bottom" constant="38" id="kog-8v-Y3C"/>
+                                <constraint firstItem="CUi-bX-nzT" firstAttribute="top" secondItem="i0D-S1-4CJ" secondAttribute="bottom" constant="38" id="qJd-xa-sl9"/>
+                                <constraint firstItem="x8N-lX-bMZ" firstAttribute="centerX" secondItem="ElZ-Rt-8jR" secondAttribute="centerX" id="tU9-Mb-jjt"/>
+                                <constraint firstItem="CUi-bX-nzT" firstAttribute="width" secondItem="4QJ-vZ-quZ" secondAttribute="width" id="tw0-GI-Vit"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ElZ-Rt-8jR" secondAttribute="bottom" id="EUU-eQ-TPU"/>
+                        <constraint firstItem="ElZ-Rt-8jR" firstAttribute="top" secondItem="g8m-4e-Ime" secondAttribute="top" constant="254" id="Nyc-nu-OA7"/>
+                        <constraint firstItem="ElZ-Rt-8jR" firstAttribute="leading" secondItem="g8m-4e-Ime" secondAttribute="leading" id="tVw-EQ-cyy"/>
+                        <constraint firstAttribute="trailing" secondItem="ElZ-Rt-8jR" secondAttribute="trailing" id="zKq-OQ-Cb9"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-2281" y="1310"/>
+        </scene>
+        <!--我-->
+        <scene sceneID="d4r-Pi-gaj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TrF-Mv-SX8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我" image="tabbar_profile" selectedImage="tabbar_profile_highlighted" id="9Uh-63-MDY"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TmU-Sy-Xoa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FrF-Kv-Bbd" kind="relationship" relationship="rootViewController" id="o2T-I4-Bfd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8o-XT-7VL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3270" y="1295"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="common_button_white_disable" width="11" height="9"/>
+        <image name="tabbar_profile" width="30" height="30"/>
+        <image name="tabbar_profile_highlighted" width="30" height="30"/>
+        <image name="visitordiscover_image_profile" width="175" height="175"/>
+    </resources>
+</document>

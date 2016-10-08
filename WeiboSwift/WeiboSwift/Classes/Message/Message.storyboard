@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1wV-Hc-iyH">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--消息-->
+        <scene sceneID="XH3-jU-Qb2">
+            <objects>
+                <viewController id="kLi-ob-hb3" customClass="MessageViewController" customModule="WeiboSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ufx-WD-WHc"/>
+                        <viewControllerLayoutGuide type="bottom" id="95q-Vs-C6W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lSB-VY-tU9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="消息" id="vSD-LN-3Kg"/>
+                    <connections>
+                        <outlet property="visitorView" destination="JuH-Et-dzN" id="iIS-9v-wak"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOI-lk-VIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="JuH-Et-dzN" customClass="OtherVisitorView" customModule="WeiboSwift" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8Y-1g-W61">
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_image_message" translatesAutoresizingMaskIntoConstraints="NO" id="J1s-L8-60J"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注一些人，回这里看看有什么惊喜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ru-BX-Jgv">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0o4-p5-DnW">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="SRp-r3-VZh"/>
+                                        <constraint firstAttribute="width" constant="100" id="ubg-zy-hXd"/>
+                                    </constraints>
+                                    <state key="normal" title="注册" backgroundImage="common_button_white_disable">
+                                        <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="register:" destination="JuH-Et-dzN" eventType="touchUpInside" id="J8C-LI-iPI"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCd-Vj-nl0">
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="aTq-Fc-Es8"/>
+                                        <constraint firstAttribute="height" constant="35" id="u73-60-Mc1"/>
+                                    </constraints>
+                                    <state key="normal" title="登录" backgroundImage="common_button_white_disable">
+                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="login:" destination="JuH-Et-dzN" eventType="touchUpInside" id="V94-sP-mKd"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="2ru-BX-Jgv" secondAttribute="trailing" constant="20" id="8ZJ-dG-eeR"/>
+                                <constraint firstItem="J1s-L8-60J" firstAttribute="centerX" secondItem="V8Y-1g-W61" secondAttribute="centerX" id="8ha-XS-Dfq"/>
+                                <constraint firstItem="NCd-Vj-nl0" firstAttribute="width" secondItem="0o4-p5-DnW" secondAttribute="width" id="HFl-9v-rPn"/>
+                                <constraint firstItem="NCd-Vj-nl0" firstAttribute="leading" secondItem="0o4-p5-DnW" secondAttribute="trailing" constant="40" id="LtA-a6-fKY"/>
+                                <constraint firstItem="0o4-p5-DnW" firstAttribute="top" secondItem="2ru-BX-Jgv" secondAttribute="bottom" constant="38" id="NXZ-Do-3pK"/>
+                                <constraint firstItem="NCd-Vj-nl0" firstAttribute="top" secondItem="2ru-BX-Jgv" secondAttribute="bottom" constant="38" id="VX5-Nn-lK3"/>
+                                <constraint firstItem="0o4-p5-DnW" firstAttribute="centerX" secondItem="V8Y-1g-W61" secondAttribute="centerX" constant="-70" id="W4c-Wm-47J"/>
+                                <constraint firstItem="J1s-L8-60J" firstAttribute="top" secondItem="V8Y-1g-W61" secondAttribute="top" constant="-32" id="eeC-iS-nEQ"/>
+                                <constraint firstItem="2ru-BX-Jgv" firstAttribute="leading" secondItem="V8Y-1g-W61" secondAttribute="leading" constant="20" id="gYA-cQ-oqx"/>
+                                <constraint firstItem="NCd-Vj-nl0" firstAttribute="height" secondItem="0o4-p5-DnW" secondAttribute="height" id="j14-Ra-x4V"/>
+                                <constraint firstItem="2ru-BX-Jgv" firstAttribute="top" secondItem="J1s-L8-60J" secondAttribute="bottom" constant="20" id="jB8-R3-5rJ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="V8Y-1g-W61" firstAttribute="leading" secondItem="JuH-Et-dzN" secondAttribute="leading" id="1u5-Qp-xm1"/>
+                        <constraint firstItem="V8Y-1g-W61" firstAttribute="top" secondItem="JuH-Et-dzN" secondAttribute="top" constant="254" id="RmB-Q6-BdY"/>
+                        <constraint firstAttribute="bottom" secondItem="V8Y-1g-W61" secondAttribute="bottom" id="htY-gy-1qk"/>
+                        <constraint firstAttribute="trailing" secondItem="V8Y-1g-W61" secondAttribute="trailing" id="kxQ-i8-PEr"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-2296.8000000000002" y="283.80809595202402"/>
+        </scene>
+        <!--消息-->
+        <scene sceneID="8LL-da-LgL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1wV-Hc-iyH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="消息" image="tabbar_message_center" selectedImage="tabbar_message_center_highlighted" id="8A0-bb-Xq8"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Egb-3d-x7L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kLi-ob-hb3" kind="relationship" relationship="rootViewController" id="1Oz-Q0-J2r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ErH-DR-c5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3236" y="283.80809595202402"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="common_button_white_disable" width="11" height="9"/>
+        <image name="tabbar_message_center" width="30" height="30"/>
+        <image name="tabbar_message_center_highlighted" width="30" height="30"/>
+        <image name="visitordiscover_image_message" width="175" height="175"/>
+    </resources>
+</document>
